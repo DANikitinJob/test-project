@@ -32,9 +32,9 @@ class TaskController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Task $task)
+    public function show($id)
     {
-        // $task = Task::find($id);
+        $task = Task::find($id);
         if (!$task) {
             return response()->json(['message' => 'Task not found'], Response::HTTP_NOT_FOUND);
         }
@@ -45,9 +45,9 @@ class TaskController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTaskRequest $request, Task $task)
+    public function update(UpdateTaskRequest $request, $id)
     {
-        // $task = Task::find($id);
+        $task = Task::find($id);
         if (!$task) {
             return response()->json(['message' => 'Task not found'], Response::HTTP_NOT_FOUND);
         }

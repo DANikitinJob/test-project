@@ -12,7 +12,7 @@ REST API для управления задачами, построенное н
 
 1. Клонируйте репозиторий
 ```bash
-git clone [url-репозитория]
+git clone https://github.com/DANikitinJob/test-project.git
 ```
 
 2. Установите зависимости
